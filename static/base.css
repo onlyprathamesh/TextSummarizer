@@ -1,0 +1,43 @@
+.label-left {
+    width: 100%;
+    text-align: left;
+    margin-left: 1%;
+    color: white;
+}
+.white-textarea{
+    opacity: 0.8;
+}
+.div-height {
+    height: 100vh;
+    position: relative;
+    padding-left: 3%;
+    padding-right: 3%;
+    /* Remove the height property or set it to auto */
+    /* height: auto; */
+}
+
+@media(max-width: 780px){
+    .div-height{
+        height: 130vh;
+    }
+    
+}
+
+.div-height::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('text3.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: blur(3px); 
+    z-index: -1;
+}
+
+.btn-light{
+    width: 100px;
+    margin: 0px auto;
+}

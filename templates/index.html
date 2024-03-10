@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block body %}
+<div class="div-height d-flex align-items-center pt-3">
+  <div class="container-fluid text-center">
+    <div class="row">
+      <form class="row g-3" action="/" method="POST">
+        <div class="col-md-6 sm-8 mb-3 my-3">
+          <label for="input_text" class="h4 label-left"
+            >Insert Text to Summarize:</label
+          >
+          <textarea
+            class="form-control white-textarea"
+            name="input_text"
+            id="input_text"
+            rows="13"
+          >{{text}}</textarea>
+        </div>
+
+        <div class="col-md-6 sm-8 mb-3 my-3">
+          <label for="output_text" class="h4 label-left"
+            >Summarized Text:</label
+          >
+          <textarea
+            class="form-control white-textarea"
+            name="output_text"
+            id="output_text"
+            rows="13"
+            readonly
+          >
+{{summary}}</textarea
+          >
+        </div>
+        <div>
+          <button type="submit" class="btn btn-light" id="summarize-btn">
+            Summarize
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock body %}
